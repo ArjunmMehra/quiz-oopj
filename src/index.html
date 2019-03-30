@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <title>Quiz</title>
+</head>
+<body>
+    <div class="grid">
+                <div id= "quiz">
+                <div id="questions">
+                    <p id="question" class="que"></p>
+                    <hr>
+                    <form action="">
+                        <input type="radio" class="form-radio" oninput="onSelected(id)" id="ch0" name="options" value=""> <label id="choice0" for="ch0"></label>
+                        <br>
+                        <input type="radio" class="form-radio"  oninput="onSelected(id)" id="ch1" name="options" value=""> <label id="choice1" for="ch1"></label>
+                        <br>
+                        <input type="radio" class="form-radio"  oninput="onSelected(id)" id="ch2" name="options" value=""> <label id="choice2" for="ch2"></label>
+                        <br>
+                        <input type="radio" class="form-radio"  oninput="onSelected(id)" id="ch3" name="options" value=""> <label id="choice3" for="ch3"></label>
+                    </form>
+                </div>
+                <div id="buttons">
+                    <button id="prevbtn" onclick="moveToPrevios(id)" disabled>
+                        Previous
+                    </button>
+                    <button id="nextbtn" onclick="moveToNext(id)" disabled>
+                        Next
+                    </button>
+                </div>
+                <hr style="margin-top: 50px">
+                <footer>
+                    <p id="progress"></p>
+                </footer>
+                </div>
+                <hr>
+    </div>
+    <script src="controllers/quizcontroller.js"></script>
+    <script src="models/question.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
